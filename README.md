@@ -9,11 +9,11 @@ of Computer Science and Engineering — Skopje (2024/2025, Summer Semester).
 ```
 watershed-cell-segmentation/
 ├── src/
-│   └── Watershed-236006.py    # Main segmentation script
+│   └── watershed_segmentation.py  # Main segmentation script
 ├── images/
 │   ├── input/
-│   │   └── img.png            # Input microscopy image
-│   └── output/                # Auto-generated result images
+│   │   └── img.png                # Input microscopy image
+│   └── output/                    # Auto-generated result images
 └── README.md
 ```
 
@@ -48,7 +48,7 @@ pip install opencv-python numpy matplotlib
 Run the script:
 ```bash
 cd src
-python Watershed-236006.py
+python watershed_segmentation.py
 ```
 
 ## 🎓 Academic Info
