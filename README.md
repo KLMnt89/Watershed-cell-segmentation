@@ -34,11 +34,12 @@ processing techniques — without manual annotation.
 ---
 
 ## 📁 Structure
-\```
+
+```
 ├── watershed_segmentation.py   # Main script
 ├── test_image.png              # Sample input image
 └── README.md
-\```
+```
 ---
 
 ## 🎓 Academic Info
