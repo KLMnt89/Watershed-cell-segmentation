@@ -1,67 +1,54 @@
-# Watershed Cell Segmentation
+# 🔬 Watershed Cell Segmentation
 
-A Python implementation of the **Watershed Algorithm** for automatic cell 
-segmentation and counting in microscopy images, completed as an individual 
-seminar project during the **Digital Image Processing** course at the Faculty 
-of Computer Science and Engineering — Skopje (2024/2025, Summer Semester).
+An independent project focused on detecting and segmenting biological cells
+from microscopy images using the **Watershed algorithm**.
 
-## 📁 Repository Structure
-```
-watershed-cell-segmentation/
-├── src/
-│   └── watershed_segmentation.py  # Main segmentation script
-├── images/
-│   ├── input/
-│   │   └── img.png                # Input microscopy image
-│   └── output/                    # Auto-generated result images
-└── README.md
-```
+---
 
-## 🧠 How It Works
+## 📌 Project Overview
 
-1. **Grayscale conversion** — converts the image to single channel
-2. **Gaussian Blur** — removes noise before processing
-3. **Otsu Binarization** — automatically thresholds the image
-4. **Morphological Closing** — fills small holes and gaps
-5. **Distance Transform** — calculates distance from background pixels
-6. **Sure Foreground/Background** — identifies certain regions
-7. **Watershed Algorithm** — segments and separates touching cells
-8. **Cell Counting** — counts unique segmented regions
+Given a microscopy test image (provided as part of the project), the goal was
+to automatically detect and isolate individual cells using classical image
+processing techniques — without manual annotation.
 
-## 📊 Output
+---
 
-Running the script generates 3 images in `images/output/`:
+## ⚙️ How It Works
 
-| File | Description |
+1. **Preprocessing** — convert to grayscale, apply thresholding/blurring to reduce noise
+2. **Distance Transform** — identify cell centers as local maxima
+3. **Watershed Segmentation** — treat the image as a topographic map and flood from markers to detect cell boundaries
+4. **Visualization** — overlay segmented regions on the original image
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
 |---|---|
-| `original.png` | Original input image |
-| `watershed_result.png` | Image with red cell boundaries |
-| `comparison.png` | Side-by-side comparison |
+| Python | Core language |
+| OpenCV | Image processing & Watershed |
+| NumPy | Array operations |
+| Matplotlib | Visualization |
 
-## 🚀 How to Run
+---
 
-Install dependencies:
-```bash
-pip install opencv-python numpy matplotlib
-```
-
-Run the script:
-```bash
-cd src
-python watershed_segmentation.py
-```
+## 📁 Structure
+\```
+├── watershed_segmentation.py   # Main script
+├── test_image.png              # Sample input image
+└── README.md
+\```
+---
 
 ## 🎓 Academic Info
 
 | Field | Details |
 |---|---|
-| Project Type | Individual Seminar |
-| Course | Digital Image Processing |
-| Institution | FCSE — Skopje |
-| Semester | Summer 2024/2025 |
+| Type | Independent student project |
+| Institution | FCSE — Skopje (FINKI) |
 | Language | Python |
-| Libraries | OpenCV, NumPy, Matplotlib |
 
 ---
 
-*Part of my academic portfolio — see other projects on my [GitHub profile](https://github.com/KLMnt89).*
+*Part of my academic portfolio — [GitHub Profile](https://github.com/KLMnt89)*
